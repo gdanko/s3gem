@@ -65,28 +65,25 @@ This command will list every gem that resides in the specified repository. Its o
 ```
 [gdanko@SDGL141bb265b ~]$ s3gem list --repo ap
 building file list ... done
-idps-0.2.7.gem
-netgenie-0.3.2.gem
-quickbase-0.2.1.gem
-dummy-0.0.7.gem
+foo-0.3.2.gem
+bar-0.2.1.gem
+baz-0.0.7.gem
 ```
 ### Diff
 This command will show you the difference between each your repo and your local copy. Its output looks like this.
 ```
 [gdanko@SDGL141bb265b ~]$ s3gem diff --repo ap
 building file list ... done
-Only in s3: gems/idps-0.2.7.gem
-Only in s3: gems/netgenie-0.3.2.gem
-Only in s3: gems/quickbase-0.2.1.gem
-Only in s3: gems/dummy-0.0.7.gem
+Only in s3: gems/foo-0.3.2.gem
+Only in s3: gems/bar-0.2.1.gem
+Only in s3: gems/baz-0.0.7.gem
 Only in s3: latest_specs.4.8
 Only in s3: latest_specs.4.8.gz
 Only in s3: prerelease_specs.4.8
 Only in s3: prerelease_specs.4.8.gz
-Only in s3: quick/Marshal.4.8/idps-0.2.7.gemspec.rz
-Only in s3: quick/Marshal.4.8/netgenie-0.3.2.gemspec.rz
-Only in s3: quick/Marshal.4.8/quickbase-0.2.1.gemspec.rz
-Only in s3: quick/Marshal.4.8/dummy-0.0.7.gemspec.rz
+Only in s3: quick/Marshal.4.8/foo-0.3.2.gemspec.rz
+Only in s3: quick/Marshal.4.8/bar-0.2.1.gemspec.rz
+Only in s3: quick/Marshal.4.8/baz-0.0.7.gemspec.rz
 Only in s3: specs.4.8
 Only in s3: specs.4.8.gz
 ```
@@ -104,7 +101,7 @@ This command adds a new gem to your existing repo. It warrants a bit of detail b
 
 Its output looks like this
 ```
-[gdanko@SDGL141bb265b ~]$ s3gem add /Users/gdanko/git/ruby-dummy/dummy-0.0.7.gem --repo ap
+[gdanko@SDGL141bb265b ~]$ s3gem add /Users/gdanko/git/ruby-baz/baz-0.0.7.gem --repo ap
 building file list ... done
 Generating Marshal quick index gemspecs for 4 gems
 ....
@@ -119,8 +116,8 @@ Generated prerelease specs index: 0.000s
 Compressing indicies
 Compressed indicies: 0.001s
 building file list ... done
-upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/gems/dummy-0.0.7.gem to s3://myrepo/gem-repo/gems/dummy-0.0.7.gem
-upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/quick/Marshal.4.8/dummy-0.0.7.gemspec.rz to s3://myrepo/gem-repo/quick/Marshal.4.8/dummy-0.0.7.gemspec.rz
+upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/gems/baz-0.0.7.gem to s3://myrepo/gem-repo/gems/baz-0.0.7.gem
+upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/quick/Marshal.4.8/baz-0.0.7.gemspec.rz to s3://myrepo/gem-repo/quick/Marshal.4.8/baz-0.0.7.gemspec.rz
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/latest_specs.4.8 to s3://myrepo/gem-repo/latest_specs.4.8
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/latest_specs.4.8.gz to s3://myrepo/gem-repo/latest_specs.4.8.gz
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/prerelease_specs.4.8.gz to s3://myrepo/gem-repo/prerelease_specs.4.8.gz
@@ -137,7 +134,7 @@ This command deletes an existing gem from your existing repo. It warrants a bit 
 
 Its output looks like this
 ```
-[gdanko@SDGL141bb265b ~]$ s3gem delete dummy-0.0.7.gem --repo ap
+[gdanko@SDGL141bb265b ~]$ s3gem delete baz-0.0.7.gem --repo ap
 building file list ... done
 Generating Marshal quick index gemspecs for 3 gems
 ...
@@ -157,6 +154,6 @@ upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/latest_s
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/prerelease_specs.4.8.gz to s3://myrepo/gem-repo/prerelease_specs.4.8.gz
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/specs.4.8 to s3://myrepo/gem-repo/specs.4.8
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/specs.4.8.gz to s3://myrepo/gem-repo/specs.4.8.gz
-delete: s3://myrepo/gem-repo/gems/dummy-0.0.7.gem
-delete: s3://myrepo/gem-repo/quick/Marshal.4.8/dummy-0.0.7.gemspec.rz
+delete: s3://myrepo/gem-repo/gems/baz-0.0.7.gem
+delete: s3://myrepo/gem-repo/quick/Marshal.4.8/baz-0.0.7.gemspec.rz
 ```
