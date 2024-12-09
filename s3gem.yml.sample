@@ -1,0 +1,6 @@
+repos:
+  repo1:
+    region: <REGION>
+    bucket: <BUCKET>
+    path: "gem-repo"
+    profile: "default"

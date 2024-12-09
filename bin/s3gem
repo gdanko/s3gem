@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+$: << File.expand_path("../lib", __FILE__)
+require "thor"
+require "s3gem/cli"
+#require_relative "../lib/s3gem/cli.rb"
+
+CLI.start
