@@ -63,7 +63,7 @@ The CLI has very few commands. This section will provide a reference for each.
 ### List
 This command will list every gem that resides in the specified repository. Its output looks like this.
 ```
-[gdanko@SDGL141bb265b ~]$ s3gem list --repo ap
+[gdanko@gdanko-mac ~]$ s3gem list --repo ap
 building file list ... done
 foo-0.3.2.gem
 bar-0.2.1.gem
@@ -72,7 +72,7 @@ baz-0.0.7.gem
 ### Diff
 This command will show you the difference between each your repo and your local copy. Its output looks like this.
 ```
-[gdanko@SDGL141bb265b ~]$ s3gem diff --repo ap
+[gdanko@gdanko-mac ~]$ s3gem diff --repo ap
 building file list ... done
 Only in s3: gems/foo-0.3.2.gem
 Only in s3: gems/bar-0.2.1.gem
@@ -101,7 +101,7 @@ This command adds a new gem to your existing repo. It warrants a bit of detail b
 
 Its output looks like this
 ```
-[gdanko@SDGL141bb265b ~]$ s3gem add /Users/gdanko/git/ruby-baz/baz-0.0.7.gem --repo ap
+[gdanko@gdanko-mac ~]$ s3gem add /Users/gdanko/git/ruby-baz/baz-0.0.7.gem --repo ap
 building file list ... done
 Generating Marshal quick index gemspecs for 4 gems
 ....
@@ -134,7 +134,7 @@ This command deletes an existing gem from your existing repo. It warrants a bit 
 
 Its output looks like this
 ```
-[gdanko@SDGL141bb265b ~]$ s3gem delete baz-0.0.7.gem --repo ap
+[gdanko@gdanko-mac ~]$ s3gem delete baz-0.0.7.gem --repo ap
 building file list ... done
 Generating Marshal quick index gemspecs for 3 gems
 ...
