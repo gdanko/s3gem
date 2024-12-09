@@ -90,7 +90,7 @@ Only in s3: specs.4.8.gz
 ### Sync
 This command forces a sync from the repo to the local copy.
 
-## Add
+### Add
 This command adds a new gem to your existing repo. It warrants a bit of detail because it does a little bit more. The add command performs the following steps.
 * Sync the repo from S3.
 * Verify that the specified gem file exists.
@@ -124,7 +124,7 @@ upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/prerelea
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/specs.4.8 to s3://myrepo/gem-repo/specs.4.8
 upload: /Users/gdanko/.s3gem/s3-us-west-2.amazonaws.com/myrepo/gem-repo/specs.4.8.gz to s3://myrepo/gem-repo/specs.4.8.gz
 ```
-## Delete
+### Delete
 This command deletes an existing gem from your existing repo. It warrants a bit of detail because it does a little bit more. The add command performs the following steps.
 * Sync the repo from S3.
 * Verify that the specified gem file exists in the local repository copy.
